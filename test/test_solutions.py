@@ -2,6 +2,7 @@ import unittest
 from remove_duplicates_from_sorted_array.solution import Solution as RemoveDuplicatesFromSortedArray
 from number_of_good_pairs.solution import Solution as NumberOfGoodPairs
 from defanging_an_ip_address.solution import Solution as DefangingAnIpAddress
+from decode_xored_array.solution import Solution as DecodeXORedArray
 
 class RemoveDuplicatesTestCase(unittest.TestCase):
   def test_solution(self):
@@ -21,5 +22,12 @@ class DefangingAnIpAddressTestCase(unittest.TestCase):
     expected = "127[.]0[.]0[.]1"
     self.assertEqual(DefangingAnIpAddress().solve(input), expected)
 
+class DecodeXORedArrayTestCase(unittest.TestCase):
+  def test_solution(self):
+    inputEncoded = [1,2,3]
+    inputFirst = 1
+    expected = [1,0,2,1]
+    self.assertEqual(DecodeXORedArray().solve(inputEncoded, inputFirst), expected)
+    
 if __name__ == '__main__':
   unittest.main()
