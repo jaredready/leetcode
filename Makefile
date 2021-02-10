@@ -1,7 +1,9 @@
+all: init test
+
 init:
 	pipenv install
 
 test:
 	pipenv run python -m unittest discover
 
-.PHONY: init test
+.PHONY: all init test
