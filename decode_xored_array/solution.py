@@ -1,9 +1,6 @@
+from itertools import accumulate
+from operator import xor
+
 class Solution:
   def solve(self, encoded: [int], first: int) -> [int]:
-    arr = [first]
-    i = 0
-    while i < len(encoded):
-      arr.append(encoded[i] ^ arr[i])
-      i += 1
-
-    return arr
+    return list(accumulate([first] + encoded, xor))
