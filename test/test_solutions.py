@@ -3,6 +3,7 @@ from remove_duplicates_from_sorted_array.solution import Solution as RemoveDupli
 from number_of_good_pairs.solution import Solution as NumberOfGoodPairs
 from defanging_an_ip_address.solution import Solution as DefangingAnIpAddress
 from decode_xored_array.solution import Solution as DecodeXORedArray
+from sum_of_all_odd_length_arrays.solution import Solution as SumOfAllOddLengthArrays
 
 class RemoveDuplicatesTestCase(unittest.TestCase):
   def test_solution(self):
@@ -28,6 +29,12 @@ class DecodeXORedArrayTestCase(unittest.TestCase):
     inputFirst = 1
     expected = [1,0,2,1]
     self.assertEqual(DecodeXORedArray().solve(inputEncoded, inputFirst), expected)
+
+class SumOfAllOddLengthArraysTestCase(unittest.TestCase):
+  def test_solution(self):
+    input = [1,4,2,5,3]
+    expected = 58
+    self.assertEqual(SumOfAllOddLengthArrays().solve(input), expected)
     
 if __name__ == '__main__':
   unittest.main()
