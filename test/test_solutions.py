@@ -4,6 +4,7 @@ from number_of_good_pairs.solution import Solution as NumberOfGoodPairs
 from defanging_an_ip_address.solution import Solution as DefangingAnIpAddress
 from decode_xored_array.solution import Solution as DecodeXORedArray
 from sum_of_all_odd_length_arrays.solution import Solution as SumOfAllOddLengthArrays
+from two_sum.solution import Solution as TwoSum
 
 class RemoveDuplicatesTestCase(unittest.TestCase):
   def test_solution(self):
@@ -35,6 +36,13 @@ class SumOfAllOddLengthArraysTestCase(unittest.TestCase):
     input = [1,4,2,5,3]
     expected = 58
     self.assertEqual(SumOfAllOddLengthArrays().solve(input), expected)
+
+class TwoSumTestCase(unittest.TestCase):
+  def test_solution(self):
+    inputNums = [2,7,11,15]
+    inputTarget = 9
+    expected = [0,1]
+    self.assertEqual(TwoSum().solve(inputNums, inputTarget), expected)
     
 if __name__ == '__main__':
   unittest.main()
